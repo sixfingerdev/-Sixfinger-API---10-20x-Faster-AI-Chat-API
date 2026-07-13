@@ -5,11 +5,63 @@
 <h1 align="center">Sixfinger API</h1>
 <p align="center"><strong>Single API. 35+ models. Credit-based billing. Streaming built in.</strong></p>
 
+<p align="center">
+  <a href="https://discord.gg/AtwqzqpwR8"><img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://api.sixfinger.live"><img src="https://img.shields.io/badge/API-Live-brightgreen" alt="API Live"></a>
+  <a href="https://api.sixfinger.live/docs"><img src="https://img.shields.io/badge/Docs-OpenAI%20Compatible-blue" alt="Docs"></a>
+  <a href="https://pypi.org/project/sixfinger/"><img src="https://img.shields.io/badge/PyPI-sixfinger-orange" alt="PyPI"></a>
+</p>
+
 Sixfinger is a production-ready AI gateway with 35+ models including Claude Sonnet, Haiku, Opus, Llama, Qwen, DeepSeek, and more. Streaming, credit-based usage, and multilingual support — all behind a single OpenAI-compatible endpoint.
 
-[![Free Plan](https://img.shields.io/badge/Free%20Plan-20%20SF%2Fmonth-brightgreen)](https://api.sixfinger.live)
-[![Models](https://img.shields.io/badge/Models-35%2B-blue)](https://api.sixfinger.live)
-[![Streaming](https://img.shields.io/badge/Streaming-SSE-orange)](https://api.sixfinger.live)
+---
+
+## Join Our Discord
+
+**[https://discord.gg/AtwqzqpwR8](https://discord.gg/AtwqzqpwR8)**
+
+- Test models with our **SixFinger API Test Bot**
+- Request new models by opening issues
+- Participate in giveaways
+- Get support and share your projects
+
+---
+
+## OpenAI-Compatible API
+
+Use the official OpenAI Python/Node.js SDK:
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://api.sixfinger.live/v1",
+    api_key="sixfinger_xxx"
+)
+
+response = client.chat.completions.create(
+    model="gpt-5",
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+print(response.choices[0].message.content)
+```
+
+**Streaming:**
+
+```python
+from openai import OpenAI
+
+client = OpenAI(base_url="https://api.sixfinger.live/v1", api_key="sixfinger_xxx")
+
+for chunk in client.chat.completions.create(
+    model="claude-haiku-4-5",
+    messages=[{"role": "user", "content": "Tell me a story"}],
+    stream=True
+):
+    content = chunk.choices[0].delta.content
+    if content:
+        print(content, end="", flush=True)
+```
 
 ---
 
@@ -50,40 +102,6 @@ response = client.chat("Hello!", model="claude-sonnet-4-6")
 print(response.content)
 ```
 
-**OpenAI SDK:**
-
-```python
-from openai import OpenAI
-
-client = OpenAI(
-    base_url="https://api.sixfinger.live/v1",
-    api_key="YOUR_KEY"
-)
-
-response = client.chat.completions.create(
-    model="claude-sonnet-4-6",
-    messages=[{"role": "user", "content": "Hello!"}]
-)
-print(response.choices[0].message.content)
-```
-
-**Streaming (SSE):**
-
-```python
-from openai import OpenAI
-
-client = OpenAI(base_url="https://api.sixfinger.live/v1", api_key="YOUR_KEY")
-
-for chunk in client.chat.completions.create(
-    model="claude-haiku-4-5",
-    messages=[{"role": "user", "content": "Tell me a story"}],
-    stream=True
-):
-    content = chunk.choices[0].delta.content
-    if content:
-        print(content, end="", flush=True)
-```
-
 ---
 
 ## Claude Models
@@ -115,7 +133,7 @@ Credits are consumed per request based on model pricing. Free models (0 SF per 1
 
 ## Get Your API Key
 
-1. Sign up at [https://api.sixfinger.live](https://api.sixfinger.live)
+1. Sign up at [api.sixfinger.live](https://api.sixfinger.live)
 2. Verify your email
 3. Grab your API key from the dashboard
 

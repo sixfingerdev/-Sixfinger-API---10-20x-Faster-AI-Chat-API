@@ -3,48 +3,13 @@
 </p>
 
 <h1 align="center">Sixfinger API</h1>
-<p align="center"><strong>Single API. 41 models. Free Claude access included. 10-20x faster than typical direct endpoints.</strong></p>
+<p align="center"><strong>Single API. 35+ models. Credit-based billing. Streaming built in.</strong></p>
 
-Sixfinger is a production-ready AI gateway that routes requests to the best available model family — now with 13 Claude models (Sonnet, Haiku, Opus, Fable) alongside 28+ other LLMs. Streaming, plan-aware access control, and multilingual performance built in.
+Sixfinger is a production-ready AI gateway with 35+ models including Claude Sonnet, Haiku, Opus, Llama, Qwen, DeepSeek, and more. Streaming, credit-based usage, and multilingual support — all behind a single OpenAI-compatible endpoint.
 
-[![Free Plan](https://img.shields.io/badge/Free%20Plan-Available-brightgreen)](https://api.sixfinger.live)
-[![Free Claude API](https://img.shields.io/badge/Free%20Claude%20API-Included-purple)](https://api.sixfinger.live)
-[![Models](https://img.shields.io/badge/Models-41-blue)](https://api.sixfinger.live)
+[![Free Plan](https://img.shields.io/badge/Free%20Plan-20%20SF%2Fmonth-brightgreen)](https://api.sixfinger.live)
+[![Models](https://img.shields.io/badge/Models-35%2B-blue)](https://api.sixfinger.live)
 [![Streaming](https://img.shields.io/badge/Streaming-SSE-orange)](https://api.sixfinger.live)
-
----
-
-## 🚀 Why Sixfinger?
-
-| Provider | Speed |
-|----------|-------|
-| **Sixfinger API** | **~1,100 char/s** |
-| Claude API | ~80–120 char/s |
-| Typical GPT APIs | ~50–100 char/s |
-
-One key. One endpoint. 13 Claude models included free. No provider switching.
-
----
-
-## 🧠 Free Claude API Access
-
-Sixfinger now includes **free Claude API access** — use Claude Sonnet 4.6, Sonnet 4.5, Haiku 4.5, and Sonnet 4 at no cost on the Free plan. Upgrade to Starter+ for Claude Opus, Fable, and 2.5x Fast variants.
-
-| Key | Model | Speed | Plan |
-|-----|-------|-------|------|
-| `claude-sonnet-4-6` | Claude Sonnet 4.6 | Fast | **Free** |
-| `claude-haiku-4-5` | Claude Haiku 4.5 | Very Fast | **Free** |
-| `claude-sonnet-4-5` | Claude Sonnet 4.5 | Fast | **Free** |
-| `claude-sonnet-4` | Claude Sonnet 4 | Fast | **Free** |
-| `claude-fable-5` | Claude Fable 5 | Fast | Starter+ |
-| `claude-opus-4-8` | Claude Opus 4.8 | Fast | Starter+ |
-| `claude-opus-4-7` | Claude Opus 4.7 | Fast | Starter+ |
-| `claude-opus-4-5` | Claude Opus 4.5 | Fast | Starter+ |
-| `claude-opus-4-1` | Claude Opus 4.1 | Fast | Starter+ |
-| `claude-opus-4` | Claude Opus 4 | Fast | Starter+ |
-| `claude-opus-4-8-fast` | Opus 4.8 Fast 2.5x | Very Fast | Starter+ |
-| `claude-opus-4-7-fast` | Opus 4.7 Fast 2.5x | Very Fast | Starter+ |
-| `claude-opus-4-6-fast` | Opus 4.6 Fast 2.5x | Very Fast | Starter+ |
 
 ---
 
@@ -121,64 +86,30 @@ for chunk in client.chat.completions.create(
 
 ---
 
-## All 41 Models
+## Claude Models
 
-| Key | Model | Size | Language | Plan |
-|-----|-------|------|----------|------|
-| `llama-8b-instant` | Llama 3.1 8B Instant | 8B | Multilingual | Free+ |
-| `allam-2-7b` | Allam 2 7B | 7B | Turkish / Arabic | Free+ |
-| `step-3.5-flash` | Step 3.5 Flash | — | Multilingual | Free+ |
-| `nemotron-3-super-120b-a12b` | Nemotron 3 Super 120B A12B | 120B | Multilingual | Free+ |
-| `glm-46` | GLM-4.6 | — | Multilingual | Free+ |
-| `deepseek-v4-flash-free` | DeepSeek V4 Flash Free | — | Multilingual | Free+ |
-| `mimo-v2.5-free` | Mimo V2.5 | — | Multilingual | Free+ |
-| `north-mini-code-free` | North Mini Code | — | Multilingual | Free+ |
-| `nemotron-3-ultra-free` | Nemotron 3 Ultra | — | Multilingual | Free+ |
-| `deepseek-v4-flash` | DeepSeek V4 Flash | — | Multilingual | Free+ |
-| `deepseek-v4-pro` | DeepSeek V4 Pro | — | Multilingual | Free+ |
-| `hy3-preview` | HY3 Preview | — | Multilingual | Free+ |
-| `qwen3.7-plus` | Qwen 3.7 Plus | — | Multilingual | Free+ |
-| `step-3.7-flash` | Step 3.7 Flash | — | Multilingual | Free+ |
-| `gemini-3.1-flash-lite` | Gemini 3.1 Flash Lite | — | Multilingual | Free+ |
-| `gemini-3-flash-preview` | Gemini 3 Flash Preview | — | Multilingual | Free+ |
-| `gpt-5.4-mini` | GPT-5.4 Mini | — | Multilingual | Free+ |
-| `minimax-m3` | MiniMax M3 | — | Multilingual | Free+ |
-| `claude-sonnet-4-6` | Claude Sonnet 4.6 | — | Multilingual | Free+ |
-| `claude-haiku-4-5` | Claude Haiku 4.5 | — | Multilingual | Free+ |
-| `claude-sonnet-4-5` | Claude Sonnet 4.5 | — | Multilingual | Free+ |
-| `claude-sonnet-4` | Claude Sonnet 4 | — | Multilingual | Free+ |
-| `gpt4-nano` | GPT-4.1 Nano | Nano | Multilingual | Starter+ |
-| `qwen3-32b` | Qwen3 32B | 32B | Turkish / Chinese | Starter+ |
-| `llama-70b` | Llama 3.3 70B | 70B | Multilingual | Starter+ |
-| `llama-scout-17b` | Llama Scout 17B | 17B | Multilingual | Starter+ |
-| `llama-pg2-86m` | Llama Prompt Guard 2 86M | 86M | Multilingual | Starter+ |
-| `gpt-oss-20b` | GPT-OSS 20B | 20B | Multilingual | Starter+ |
-| `glm-4.5-air` | GLM 4.5 Air | — | Multilingual | Starter+ |
-| `qwen3-coder` | Qwen3 Coder | — | Multilingual | Starter+ |
-| `lfm-2.5-1.2b-thinking` | LFM 2.5 1.2B Thinking | 1.2B | Multilingual | Starter+ |
-| `claude-fable-5` | Claude Fable 5 | — | Multilingual | Starter+ |
-| `claude-opus-4-8` | Claude Opus 4.8 | — | Multilingual | Starter+ |
-| `claude-opus-4-7` | Claude Opus 4.7 | — | Multilingual | Starter+ |
-| `claude-opus-4-5` | Claude Opus 4.5 | — | Multilingual | Starter+ |
-| `claude-opus-4-1` | Claude Opus 4.1 | — | Multilingual | Starter+ |
-| `claude-opus-4` | Claude Opus 4 | — | Multilingual | Starter+ |
-| `claude-opus-4-8-fast` | Claude Opus 4.8 Fast | — | Multilingual | Starter+ |
-| `claude-opus-4-7-fast` | Claude Opus 4.7 Fast | — | Multilingual | Starter+ |
-| `claude-opus-4-6-fast` | Claude Opus 4.6 Fast | — | Multilingual | Starter+ |
-| `gpt-oss-120b` | GPT-OSS 120B | 120B | Multilingual | Pro+ |
+5 Claude models available across all plans:
+
+| Key | Model | Cost (input / output per 1M tokens) |
+|-----|-------|--------------------------------------|
+| `claude-sonnet-4-6` | Claude Sonnet 4.6 | 3 / 15 SF |
+| `claude-haiku-4-5` | Claude Haiku 4.5 | 1 / 5 SF |
+| `claude-sonnet-5` | Claude Sonnet 5 | 2 / 10 SF |
+| `claude-opus-4-8` | Claude Opus 4.8 | 5 / 25 SF |
+| `claude-opus-4-7` | Claude Opus 4.7 | 5 / 25 SF |
 
 ---
 
 ## Plans
 
-| Plan | Price | Requests/mo | Tokens/mo | RPM | RPH |
-|------|------:|------------:|----------:|----:|----:|
-| Free | 0 USD | 200 | 20,000 | 3 | 60 |
-| Starter | 5 USD | 3,000 | 300,000 | 15 | 300 |
-| Pro | 15 USD | 75,000 | 7,500,000 | 50 | 1,500 |
-| Plus | 39 USD | 500,000 | 50,000,000 | 150 | 5,000 |
+| Plan | Price | Monthly Credits | Streaming |
+|------|------:|----------------:|:---------:|
+| Free | $0 | 20 SF | ✓ |
+| Starter | $5 | 100 SF | ✓ |
+| Pro | $15 | 400 SF | ✓ |
+| Plus | $39 | 1500 SF | ✓ |
 
-All plans include streaming, monthly quota tracking without daily caps, and Claude model access. [Start free →](https://api.sixfinger.live)
+Credits are consumed per request based on model pricing. Free models (0 SF per 1M tokens) cost nothing. Purchased credits never expire.
 
 ---
 
@@ -190,17 +121,6 @@ All plans include streaming, monthly quota tracking without daily caps, and Clau
 
 ---
 
-## 🛠 What You Can Build
-
-- **Coding assistants** — Claude Opus and Sonnet for complex code generation, Qwen3 Coder for specialized tasks
-- **Support bots** — Claude Haiku for low-latency streaming, Llama 8B for general chat
-- **Content pipelines** — Claude Fable and Opus for creative writing at scale
-- **Multilingual apps** — Claude, Qwen3, and Allam models under one key
-- **Internal automation** — summarization, tagging, and classification with Claude Sonnet
-- **Reasoning workloads** — DeepSeek, Nemotron, and Claude Opus for chain-of-thought tasks
-
----
-
 ## Documentation
 
 Full API docs at [api.sixfinger.live/docs](https://api.sixfinger.live/docs)
@@ -208,12 +128,11 @@ Full API docs at [api.sixfinger.live/docs](https://api.sixfinger.live/docs)
 **Endpoints:**
 
 ```
-POST /v1/chat/completions                      — OpenAI-compatible chat (stream or sync)
-GET  /v1/models                                — List available models (OpenAI-compatible)
-GET  /v1/models/:id                            — Get a single model
-POST /api/v1/chat                              — Legacy chat (still supported)
-GET  /api/v1/stats                             — Usage stats
-GET  /health                                   — Health check
+POST /v1/chat/completions    — OpenAI-compatible chat (stream or sync)
+GET  /v1/models              — List available models
+POST /api/v1/chat            — Legacy chat
+GET  /api/v1/stats           — Usage stats
+GET  /health                 — Health check
 ```
 
 ---

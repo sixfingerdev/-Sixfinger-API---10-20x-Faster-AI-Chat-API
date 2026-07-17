@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">Sixfinger API</h1>
-<p align="center"><strong>Single API. 35+ models. Credit-based billing. Streaming built in.</strong></p>
+<p align="center"><strong>Single API. 25+ models. Credit-based billing. Streaming built in.</strong></p>
 
 <p align="center">
   <a href="https://discord.gg/AtwqzqpwR8"><img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
@@ -12,7 +12,7 @@
   <a href="https://pypi.org/project/sixfinger/"><img src="https://img.shields.io/badge/PyPI-sixfinger-orange" alt="PyPI"></a>
 </p>
 
-Sixfinger is a production-ready AI gateway with 35+ models including Claude Sonnet, Haiku, Opus, Llama, Qwen, DeepSeek, and more. Streaming, credit-based usage, and multilingual support — all behind a single OpenAI-compatible endpoint.
+Sixfinger is a production-ready AI gateway with 25+ models including Claude Opus 4.1, Haiku 4.5, DeepSeek, Qwen, Nemotron, GPT, GLM, Kimi, and more. Streaming, credit-based usage, and multilingual support — all behind a single OpenAI-compatible endpoint.
 
 ---
 
@@ -71,14 +71,14 @@ for chunk in client.chat.completions.create(
 curl -X POST https://api.sixfinger.live/v1/chat/completions \
   -H "X-API-Key: YOUR_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"model": "claude-sonnet-4-6", "messages": [{"role": "user", "content": "Hello!"}]}'
+  -d '{"model": "deepseek-v4-flash", "messages": [{"role": "user", "content": "Hello!"}]}'
 ```
 
 ```json
 {
   "id": "chatcmpl-...",
   "object": "chat.completion",
-  "model": "claude-sonnet-4-6",
+  "model": "deepseek-v4-flash",
   "choices": [{
     "index": 0,
     "message": {"role": "assistant", "content": "Hello! How can I help you?"},
@@ -98,23 +98,25 @@ pip install sixfinger
 from sixfinger import API
 
 client = API(api_key="YOUR_KEY")
-response = client.chat("Hello!", model="claude-sonnet-4-6")
+response = client.chat("Hello!", model="deepseek-v4-flash")
 print(response.content)
 ```
 
 ---
 
-## Claude Models
+## Featured Models
 
-5 Claude models available across all plans:
+All models available on every plan:
 
 | Key | Model | Cost (input / output per 1M tokens) |
 |-----|-------|--------------------------------------|
-| `claude-sonnet-4-6` | Claude Sonnet 4.6 | 3 / 15 SF |
-| `claude-haiku-4-5` | Claude Haiku 4.5 | 1 / 5 SF |
-| `claude-sonnet-5` | Claude Sonnet 5 | 2 / 10 SF |
-| `claude-opus-4-8` | Claude Opus 4.8 | 5 / 25 SF |
-| `claude-opus-4-7` | Claude Opus 4.7 | 5 / 25 SF |
+| `deepseek-v4-flash` | DeepSeek V4 Flash | 0 / 0 SF |
+| `claude-haiku-4-5` | Claude Haiku 4.5 | 0 / 0 SF |
+| `claude-opus-4.1` | Claude Opus 4.1 | 0 / 0 SF |
+| `nemotron-3-ultra` | Nemotron 3 Ultra | 1 / 4 SF |
+| `qwen3.7-max` | Qwen 3.7 Max | 2 / 8 SF |
+| `gpt-5` | GPT-5 | 0 / 0 SF |
+| `kimi-k2.7-code` | Kimi K2.7 Code | 0 / 0 SF |
 
 ---
 
